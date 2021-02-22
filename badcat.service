@@ -1,0 +1,9 @@
+[Unit]
+Description=Input Lock
+Documentation=man:badcat(8)
+
+[Service]
+ExecStart=badcat
+
+[Install]
+WantedBy=multi-user.target

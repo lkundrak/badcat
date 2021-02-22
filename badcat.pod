@@ -1,0 +1,54 @@
+=head1 NAME
+
+badcat - Simple & Stupid Input Lock
+
+=head1 SYNOPSIS
+
+B<systemctl start badcat.service>
+
+=head1 DESCRIPTION
+
+B<badcat> is a simple tool that locks/unlocks all input on a Linux system
+upon a press of I<Scroll Lock> key. No more and no less.
+
+It interacts directly with input event devices and thus is independent of
+version or presence of a desktop environment. Hotplug of input devices is
+supported.
+
+It is not a security tool and does not replace a screen lock to guard
+against a malicious attacker. When, however, the attacker is less
+sophisticated (and quite possibly feline), it serves as a lightweight
+alternative that does not require disabling screen output.
+
+=head1 BUGS
+
+It's not possible to filter the devices in any way. A variable in udev that
+would blacklist a device would be nice.
+
+The magic key is hardcoded to I<Scroll Lock>. A configurable key
+combination or a password might be useful when the intruder is a specimen
+of I<Homo> species with sophistication reaching higher levels at older age.
+
+=head1 AUTHORS
+
+=over
+
+=item * Lubomir Rintel <L<lkundrak@v3.sk>>
+
+=back
+
+Nobody else. Just me, alone, and sad. Send help.
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+The source code repository can be obtained from
+L<https://github.com/lkundrak/badcat>. Bug fixes and feature
+ehancements licensed under same conditions as badcat are welcome
+via GIT pull requests.
+
+=head1 SEE ALSO
+
+L<cat(1)>.
